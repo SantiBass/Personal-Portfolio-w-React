@@ -1,11 +1,14 @@
 import React from 'react'
-
-export default function Navbar() {
+import Logo from '../../Assets/images/macLogo.jpg'
+ function Navbar() {
   return (
     <div>This is the Navbar
-      <div className='leftSide'>sdfg</div>
+      <div className='leftSide'>
+        <img src={Logo}/>
+      </div>
       <div className='rightSide'></div>
 
     </div>
   )
 }
+export default Navbar();
