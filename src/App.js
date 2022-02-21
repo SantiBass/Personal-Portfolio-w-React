@@ -1,22 +1,23 @@
-  import cover from './Assets/images/nick-karvounis-3_ZGrsirryY-unsplash.jpg';
-// everything runs from this file
-import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
-import Home from './components/pages/HomePage';
+  // import cover from './Assets/images/nick-karvounis-3_ZGrsirryY-unsplash.jpg';
+  // everything runs from this file
 import './App.css';
+ import Home from './pages/Home';
 import Navbar from './components/navbar/Navbar';
-import About from './components/about/About';
-import { react } from '@babel/types';
+import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
+// import About from './components/about/About';
 function App() {
-  return <div className="App">Main html
+  return (
+  <div className="App"><h1>erwqe</h1>
     <Router>
       <Navbar/>
-    <Switch>
-      <Route path='/' exact component={Home}/>
-    </Switch>
+        <Routes>
+      <Route path="/" exact component={Home}/>
+    </Routes>
    </Router>
 
 
-  </div>;
+  </div>
+  );
 }
 
 export default App;
