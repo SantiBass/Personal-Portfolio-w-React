@@ -11,33 +11,54 @@ function Navbar({currentPage, pageHandler}) {
          listStyleType:"none"
        },
    space:{
-     marginRight: "50px"
+     marginRight: "150px"
    }
  }
    
-  return (
-    <><ul style={styles.list} className="nav">
+  return ( 
+
+    <>
+    {/* links for the navigation bar */}
+    <ul style={styles.list}>
       <li style={styles.space} className="nav-item">
         <a style={styles.links}
         href="#about" onClick={()=> pageHandler("About")}
         className={currentPage==="About" ? "nav-link active" :"nav-link"}
         >
-          About
+          About me
 
         </a>
       </li>
-      <ul style={styles.list} className="nav">
+      
       <li style={styles.space} className="nav-item">
         <a style={styles.links}
-        href="#about" onClick={()=> pageHandler("About")}
-        className={currentPage==="Projects" ? "nav-link active" :"nav-link"}
+        href="#projects" onClick={()=> pageHandler("Projects")}
+        className={currentPage === "Projects" ? "nav-link active" :"nav-link"}
         >
           Projects
 
         </a>
       </li>
+      <li style={styles.space} className="nav-item">
+        <a style={styles.links}
+        href="#contact" onClick={()=> pageHandler("Contact")}
+        className={currentPage === "Projects" ? "nav-link active" :"nav-link"}
+        >
+          Contact
+
+        </a>
+      </li>
+      <li style={styles.space} className="nav-item">
+        <a style={styles.links}
+        href="#resume" onClick={()=> pageHandler("Resume")}
+        className={currentPage === "Projects" ? "nav-link active" :"nav-link"}
+        >
+          Resume
+
+        </a>
+      </li>
       
-    </ul>
+    
     </ul>
     
     {/* <div>Navbar</div> */}

@@ -13,6 +13,7 @@ export default function Header() {
     header: {
       position: "sticky",
       color: "black",
+      fontWeight:300
     },
     name: {
         color: "black",
@@ -36,24 +37,27 @@ export default function Header() {
     );
   };
   const nameLogo = (
-    <Typography variant="h4" component="h1">
-     Santiago I.R.
+    <Typography style={{fontWeight:1000}} variant="h3" component="h1">
+     <h1></h1>Santiago I.R.    
     </Typography>
   );
-
+  
   const [currentPage, setCurrentPage] = useState("About");
 
   const renderPage = () => {
     if (currentPage === "About") {
       return <About/>;
     }
-    if (currentPage === "Portfolio") {
+    if (currentPage === "Projects") {
       return <Projects/>;
     }
     if (currentPage === "Resume") {
       return <Resume/>;
     }
-    return <Contact/>;
+    if (currentPage === "Contact") {
+      return <Contact/>;
+    }
+   
   };
 
   const handlePageChange = (page) => setCurrentPage(page);
