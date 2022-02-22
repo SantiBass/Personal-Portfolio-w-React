@@ -4,7 +4,7 @@ function Navbar({currentPage, pageHandler}) {
 
     links:{
       color:"black",
-      textDecoration:none
+      textDecoration:"none"
        },
        list:{
          display:"flex",
@@ -26,8 +26,22 @@ function Navbar({currentPage, pageHandler}) {
 
         </a>
       </li>
+      <ul style={styles.list} className="nav">
+      <li style={styles.space} className="nav-item">
+        <a style={styles.links}
+        href="#about" onClick={()=> pageHandler("About")}
+        className={currentPage==="Projects" ? "nav-link active" :"nav-link"}
+        >
+          Projects
+
+        </a>
+      </li>
       
-    </ul><div>Navbar</div></>
+    </ul>
+    </ul>
+    
+    {/* <div>Navbar</div> */}
+    </>
   
   )
 }
