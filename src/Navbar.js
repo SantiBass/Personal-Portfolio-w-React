@@ -16,7 +16,18 @@ function Navbar({currentPage, pageHandler}) {
  }
    
   return (
-    <div>Navbar</div>
+    <><ul style={styles.list} className="nav">
+      <li style={styles.space} className="nav-item">
+        <a style={styles.links}
+        href="#about" onClick={()=> pageHandler("About")}
+        className={currentPage==="About" ? "nav-link active" :"nav-link"}
+        >
+          About
+
+        </a>
+      </li>
+      
+    </ul><div>Navbar</div></>
   
   )
 }
